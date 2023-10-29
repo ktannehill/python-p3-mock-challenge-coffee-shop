@@ -18,6 +18,12 @@ coffee4 = Coffee("light oatmilk macchiato")
 order1 = Order(customer1, coffee2, 5.00)
 order2 = Order(customer3, coffee4, 9.50)
 order3 = Order(customer1, coffee2, 6.00)
+order3 = Order(customer2, coffee2, 6.00)
+order3 = Order(customer1, coffee2, 6.00)
+order3 = Order(customer3, coffee2, 6.00)
+order3 = Order(customer1, coffee2, 6.00)
+order3 = Order(customer1, coffee2, 6.00)
+order3 = Order(customer1, coffee2, 6.00)
 
 if __name__ == '__main__':
     print("HELLO! :) let's debug")

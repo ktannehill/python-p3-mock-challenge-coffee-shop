@@ -63,6 +63,22 @@ class Customer:
         return Order(self, coffee, price)
     # associates it with that customer and coffee obj provided?
     
+    @classmethod
+    def most_aficionado(cls, coffee):
+        max_customer = None
+        temp_max = 0
+        max_spent = 0
+        coffee_orders = [order for order in Order.all if order.coffee == coffee]
+        for customer in cls.all:
+            for order in coffee_orders:
+                if order.customer == customer:
+                    temp_max += order.price
+            if temp_max > max_spent:
+                max_spent = temp_max
+                max_customer = customer
+            temp_max = 0
+        return max_customer
+
 class Order:
     all = []
 
